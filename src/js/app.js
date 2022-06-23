@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 import ReactDOM from "react-dom";
+import Home from "./home";
+
+import "../sass/main.scss";
+
 
 import {
     HashRouter,
@@ -10,18 +14,11 @@ import {
 } from 'react-router-dom';
 
 
-const Home = ()=> {
-    return (
-        <>
-            <h1>Home</h1>
-        </>
-    )
-}
 
 const About =() => {
     return (
         <>
-            <h1>About</h1>
+            <h1>Kontakt</h1>
         </>
     )
 }
@@ -40,8 +37,8 @@ const App = () => {
             <HashRouter>
                 <Switch>
                     <Route path="/" component={Home} exact/>
-                    <Route path="/about" component={About}/>
-                    <Route path="/shop" component={Shop}/>
+                    {/*<Route path="/course" component={Course}/>*/}
+                    {/*<Route path="/registation" component={Registration}/>*/}
                 </Switch>
             </HashRouter>
         </main>
