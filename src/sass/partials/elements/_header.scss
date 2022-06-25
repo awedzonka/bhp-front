@@ -1,0 +1,96 @@
+h1 {
+  color: $colorHeader;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 70px;
+  letter-spacing: 4.3px;
+
+  @media ($mobileView) {
+    font-size: $fontSizeHeaderMobile;
+  }
+  @media ($desktopView) {
+    font-size: $fontSizeHeaderDesktop;
+  }
+}
+
+.xNavigation {
+  @media ($mobileView) {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $darkBlue;
+    border-radius: 50%;
+    &:hover {
+      transform: rotate(45deg);
+      cursor: pointer;
+      transition: 0.2s linear;
+    }
+  }
+  @media ($desktopView) {
+    display: none;
+  }
+}
+
+
+div {
+  max-width: 90%;
+  margin: 5px auto;
+}
+
+.homeNav {
+  position: absolute;
+  height: 60px;
+  @include navText;
+  background-color: $lightBlue;
+  border-radius: 10px;
+  margin: 10px 0;
+
+
+
+  @media ($mobileView) {
+    position: absolute;
+    min-width: 400px;
+    left: -500px;
+    font-size: $fontSizeTitleMobile;
+    display: block;
+    border-radius: 10px;
+    transition: .3s linear;}
+
+  @media ($desktopView) {
+    font-size: $fontSizeTitleDesktop;
+    display: flex;
+    justify-content: space-around;
+    min-width: 90%;
+    line-height: 50px;
+    margin: 10px auto;
+  }
+}
+
+li a {
+  display: block;
+  padding: 5px 10px;
+  background-color: $lightBlue;
+
+
+  @media ($mobileView) {
+  min-width: 250px;
+};
+  @media ($desktopView) {
+     display: block;
+  }
+}
+
+li a:hover {
+  background-color: lighten($lightBlue, 5%);
+};
+
+.xNavigation:hover + .homeNav {
+   left:40px;
+
+}
