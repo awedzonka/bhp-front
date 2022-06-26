@@ -18,23 +18,20 @@ h1 {
     position: absolute;
     top: 20px;
     left: 40px;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 40px;
     width: 40px;
     height: 40px;
-    border: 2px solid $darkBlue;
-    border-radius: 50%;
-    &:hover {
-      transform: rotate(45deg);
-      cursor: pointer;
-      transition: 0.2s linear;
-    }
+    justify-content: space-around;
   }
   @media ($desktopView) {
     display: none;
   }
+}
+
+.xNavigationInside {
+  width: 40px;
+  height: 5px;
+  border-radius: 10px;
+  transition: 0.3s linear;
 }
 
 
@@ -51,16 +48,14 @@ div {
   border-radius: 10px;
   margin: 10px 0;
 
-
-
   @media ($mobileView) {
     position: absolute;
-    min-width: 400px;
-    left: -500px;
+    height: 50vh;
+    left: 40px;
     font-size: $fontSizeTitleMobile;
-    display: block;
+    flex-flow: row-reverse nowrap;
     border-radius: 10px;
-    transition: .3s linear;}
+  }
 
   @media ($desktopView) {
     font-size: $fontSizeTitleDesktop;
@@ -79,18 +74,20 @@ li a {
 
 
   @media ($mobileView) {
-  min-width: 250px;
-};
+    padding: 20px;
+  };
+
   @media ($desktopView) {
-     display: block;
+    display: block;
   }
 }
 
 li a:hover {
   background-color: lighten($lightBlue, 5%);
-};
-
-.xNavigation:hover + .homeNav {
-   left:40px;
-
 }
+
+;
+
+//.xNavigation:hover + .homeNav {
+//  left: 40px;
+//}
