@@ -13,24 +13,6 @@ import {
     NavLink, BrowserRouter,
 } from 'react-router-dom';
 
-
-
-const About =() => {
-    return (
-        <>
-            <h1>Kontakt</h1>
-        </>
-    )
-}
-
-const Shop = () => {
-    return (
-        <>
-            <h1>Shop</h1>
-        </>
-    )
-}
-
 const App = () => {
     return (
         <main>

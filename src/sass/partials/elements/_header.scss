@@ -41,12 +41,11 @@ div {
 }
 
 .homeNav {
-  position: absolute;
   height: 60px;
   @include navText;
   background-color: $lightBlue;
   border-radius: 10px;
-  margin: 10px 0;
+  margin: 10px 0 0 0;
 
   @media ($mobileView) {
     position: absolute;
@@ -85,10 +84,4 @@ li a {
 
 li a:hover {
   background-color: lighten($lightBlue, 5%);
-}
-
-;
-
-//.xNavigation:hover + .homeNav {
-//  left: 40px;
-//}
+};
