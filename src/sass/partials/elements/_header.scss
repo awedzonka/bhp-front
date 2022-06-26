@@ -55,6 +55,7 @@ div {
     font-size: $fontSizeTitleMobile;
     flex-flow: row-reverse nowrap;
     border-radius: 10px;
+    display: none;
   }
 
   @media ($desktopView) {
