@@ -82,6 +82,6 @@ li a {
   }
 }
 
-li a:hover {
+li a:hover, li a:active {
   background-color: lighten($lightBlue, 5%);
 };

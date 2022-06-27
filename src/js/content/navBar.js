@@ -6,9 +6,9 @@ const NavBar = () => {
     return (
         <>
             <ul className="navBarList">
-                <li><a href="/">start testu</a></li>
-                <li><a href="/">rejestracja</a></li>
-                <li><a href="/">logowanie</a></li>
+                <li><a href="/">Start testu</a></li>
+                <li><a href="/">Rejestracja</a></li>
+                <li><a href="/">Logowanie</a></li>
             </ul>
         </>
     )

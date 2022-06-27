@@ -1,18 +1,23 @@
 * {
   font-family: $font-Chonburi;
-  background-color: $bege3;
-box-sizing: border-box;
-  }
 
-a{
+  background-color: lightgrey;
+
+
+  box-sizing: border-box;
+}
+
+a {
   text-decoration: none;
   list-style: none;
   color: $colorHeader;
 
-  }
+}
+
 a:hover {
   font-weight: bold;
 }
+
 $mobileView: "max-width:1200px";
 $desktopView: "min-width:1201px";
 
