@@ -1,18 +1,17 @@
 import React, {useEffect, useState} from "react";
-import Header from "./content/header.js";
-import LoadingPage from "./content/loadingPage.js";
-import Navigation from "./burgerMenu/navigation.js";
-import Content from "./content/content.js";
-import {API_URL, HOME_PAGE_PATH} from "./service/consts.js";
+import Header from "./header";
+import Content from "./content";
+import Navigation from "../burgerMenu/navigation";
+import {ABOUT_US_PATH, API_URL} from "../service/consts";
+import LoadingPage from "./loadingPage";
 
-
-const Home = () => {
+const Contact = () => {
     const [loading, setLoading] = useState(true);
     const [generalResponse, setGeneralResponse] = useState(null)
 
     useEffect(() => {
 
-        fetch(API_URL + HOME_PAGE_PATH)
+        fetch(API_URL + ABOUT_US_PATH)
             .then(resp => resp.json())
             .then(data => {
                 setGeneralResponse(data);
@@ -33,13 +32,10 @@ const Home = () => {
             <>
                 <Header/>
                 <Navigation/>
-                <Content
-                    response={generalResponse}
-                />
+                <Content response={generalResponse}/>
+
             </>
         )
     }
 }
-
-
-export default Home;
+export default Contact;
