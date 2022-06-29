@@ -1,17 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from "react-dom";
 import Home from "./home";
-
+import Contact from "./content/contact.js";
+import Registration from "./content/registration.js";
 import "../sass/main.scss";
 
 
-import {
-    HashRouter,
-    Route,
-    Link,
-    Switch,
-    NavLink, BrowserRouter,
-} from 'react-router-dom';
+import {HashRouter, Route, Switch,} from 'react-router-dom';
 
 const App = () => {
     return (
@@ -19,8 +14,10 @@ const App = () => {
             <HashRouter>
                 <Switch>
                     <Route path="/" component={Home} exact/>
+                    <Route path="/contact" component={Contact}/>
+                    <Route path="/registration" component={Registration}/>
+
                     {/*<Route path="/course" component={Course}/>*/}
-                    {/*<Route path="/registation" component={Registration}/>*/}
                 </Switch>
             </HashRouter>
         </main>
