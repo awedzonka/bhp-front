@@ -3,19 +3,19 @@ import Header from "./header.js";
 import LoadingPage from "./loadingPage.js";
 import Navigation from "../burgerMenu/navigation.js";
 import Content from "./content.js";
-import {API_URL, REGISTRATION_SUCCESS } from "../service/consts.js";
+import {API_URL, REGISTRATION_SUCCESS} from "../service/consts.js";
 
 
-
-const RegistrationSuccess =()=>{
+const RegistrationSuccess = () => {
     const [loading, setLoading] = useState(true);
     const [generalResponse, setGeneralResponse] = useState(null)
 
     useEffect(() => {
 
-        fetch(API_URL + REGISTRATION_SUCCESS )
+        fetch(API_URL + REGISTRATION_SUCCESS)
             .then(resp => {
-                    return resp.json()})
+                return resp.json()
+            })
             .then(data => {
                 setGeneralResponse(data);
                 setLoading(false)

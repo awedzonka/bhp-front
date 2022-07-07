@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 
 const NavBar = () => {
@@ -6,11 +7,12 @@ const NavBar = () => {
     return (
         <>
             <ul className="navBarList">
-                <li><a href="/">Start testu</a></li>
-                <li><a href="/registration">Rejestracja</a></li>
-                <li><a href="/">Logowanie</a></li>
+                <li><Link to="/">Start testu</Link></li>
+                <li><Link to="/registration">Rejestracja</Link></li>
+                <li><Link to="/">Logowanie</Link></li>
             </ul>
         </>
     )
 }
 export default NavBar;
+

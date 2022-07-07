@@ -74,9 +74,6 @@ const MainContentRegistration = ({response}) => {
         return <span style={{color: "red"}}>{text}</span>
     }
 
-
-
-
     return (
         <div className="mainContentRegistration mainContent">
             <h1>{response.contentPage.header}</h1>
