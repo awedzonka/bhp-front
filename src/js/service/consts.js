@@ -5,6 +5,8 @@ export const REGISTRATION_US_PATH = "/registration";
 export const REGISTRATION_SUCCESS = "/registration-success";
 
 
+
+
 export const APP_ORIGIN = "http://localhost:3005/#";
 export const APP_PATH_REGISTRATION_SUCCESS = "/registration-success";
 

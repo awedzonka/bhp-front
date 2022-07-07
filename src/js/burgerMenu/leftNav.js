@@ -39,7 +39,7 @@ const LeftNavigation = ({open}) => {
 
             <ul open={open} className="homeNav" style={{display: stateDisplay}}>
                 <li><Link to="/">strona główna</Link></li>
-                <li><Link to="/course/1"> materiały szkoleniowe </Link></li>
+                <li><Link to="/course"> materiały szkoleniowe </Link></li>
                 <li><Link to="/registration"> rejestracja </Link></li>
                 <li><Link to="/log"> logowanie </Link></li>
                 <li><Link to="/contact">kontakt</Link></li>

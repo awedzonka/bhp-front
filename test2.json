@@ -1,0 +1,80 @@
+{
+  "customer": {
+    "registration": {
+      "statusRegistration": 400,
+      "generalErrorMessage": "Hasła muszą być takie same",
+      "mapErrors": {}
+    }
+  },
+  "contentPage": {
+    "header": "Rejestracja konta",
+    "content": null
+  },
+  "registrationFormFields": {
+    "inputTextList": [
+      {
+        "label": "Podaj login",
+        "id": "login",
+        "name": "login",
+        "type": "text",
+        "value": ""
+      },
+      {
+        "label": "Podaj hasło",
+        "id": "password",
+        "name": "password",
+        "type": "password",
+        "value": ""
+      },
+      {
+        "label": "Powtórz hasło",
+        "id": "password2",
+        "name": "password2",
+        "type": "password",
+        "value": ""
+      },
+      {
+        "label": "Imię",
+        "id": "firstName",
+        "name": "firstName",
+        "type": "text",
+        "value": ""
+      },
+      {
+        "label": "Nazwisko",
+        "id": "lastName",
+        "name": "lastName",
+        "type": "text",
+        "value": ""
+      },
+      {
+        "label": "Miasto",
+        "id": "city",
+        "name": "city",
+        "type": "text",
+        "value": ""
+      },
+      {
+        "label": "Ulica",
+        "id": "street",
+        "name": "street",
+        "type": "text",
+        "value": ""
+      },
+      {
+        "label": "Numer domu",
+        "id": "homeNumber",
+        "name": "homeNumber",
+        "type": "text",
+        "value": ""
+      },
+      {
+        "label": "Email:",
+        "id": "email",
+        "name": "email",
+        "type": "text",
+        "value": ""
+      }
+    ]
+  }
+}
