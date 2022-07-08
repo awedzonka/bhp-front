@@ -1,9 +1,6 @@
 * {
   font-family: $font-Chonburi;
-
   background-color: lightgrey;
-
-
   box-sizing: border-box;
 }
 
@@ -17,10 +14,10 @@ a {
 a:hover {
   font-weight: bold;
 }
-
 $mobileView: "max-width:1200px";
 $desktopView: "min-width:1201px";
 
 
-
-
+#triangle {
+  margin: 25% auto;
+}

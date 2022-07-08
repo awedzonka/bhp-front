@@ -4,6 +4,7 @@ import LoadingPage from "./loadingPage.js";
 import Navigation from "../burgerMenu/navigation.js";
 import Content from "./content.js";
 import {API_URL, REGISTRATION_SUCCESS} from "../service/consts.js";
+import Footer from "./footer";
 
 
 const RegistrationSuccess = () => {
@@ -37,6 +38,7 @@ const RegistrationSuccess = () => {
                 <Content
                     response={generalResponse}
                 />
+                <Footer/>
             </>
         )
     }

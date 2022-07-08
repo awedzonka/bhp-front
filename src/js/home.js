@@ -4,6 +4,7 @@ import LoadingPage from "./content/loadingPage.js";
 import Navigation from "./burgerMenu/navigation.js";
 import Content from "./content/content.js";
 import {API_URL, HOME_PAGE_PATH} from "./service/consts.js";
+import Footer from "./content/footer";
 
 
 const Home = () => {
@@ -36,6 +37,7 @@ const Home = () => {
                 <Content
                     response={generalResponse}
                 />
+                <Footer/>
             </>
         )
     }

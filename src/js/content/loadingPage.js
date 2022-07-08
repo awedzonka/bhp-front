@@ -1,11 +1,16 @@
 import React from "react";
+import {Audio, Triangle} from 'react-loader-spinner'
 
 
 const LoadingPage = () => {
     return (
         <>
-            <h1 style={{transform: "translate(0%, 500%)"}}> Wczytuję stronę</h1>
-
+            <Triangle
+                height="200"
+                width="200"
+                color="red"
+                ariaLabel='loading'
+            />
         </>
     )
 }

@@ -4,6 +4,7 @@ import Navigation from "../burgerMenu/navigation.js";
 import RegistrationForm from "./registrationForm.js";
 import {API_URL, REGISTRATION_US_PATH} from "../service/consts";
 import LoadingPage from "./loadingPage";
+import Footer from "./footer";
 
 const Registration = () => {
     const [loading, setLoading] = useState(true);
@@ -31,6 +32,7 @@ const Registration = () => {
                 <Header/>
                 <Navigation/>
                 <RegistrationForm response={generalResponse}/>
+                <Footer/>
             </>
         )
     }

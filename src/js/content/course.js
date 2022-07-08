@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import Header from "./header.js";
 import Navigation from "../burgerMenu/navigation.js";
 import CourseContent from "./courseContent.js";
+import Footer from "./footer";
 
 
 const Course = () => {
@@ -16,6 +17,7 @@ const Course = () => {
                 <Header/>
                 <Navigation/>
                 <CourseContent />
+                <Footer/>
             </>
         )
 }

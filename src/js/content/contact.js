@@ -4,6 +4,7 @@ import Content from "./content";
 import Navigation from "../burgerMenu/navigation";
 import {ABOUT_US_PATH, API_URL} from "../service/consts";
 import LoadingPage from "./loadingPage";
+import Footer from "./footer";
 
 const Contact = () => {
     const [loading, setLoading] = useState(true);
@@ -33,7 +34,7 @@ const Contact = () => {
                 <Header/>
                 <Navigation/>
                 <Content response={generalResponse}/>
-
+                <Footer/>
             </>
         )
     }
