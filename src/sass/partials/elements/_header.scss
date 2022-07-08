@@ -84,4 +84,14 @@ li a {
 
 li a:hover, li a:active {
   background-color: lighten($lightBlue, 5%);
-};
+}
+
+.open {
+  background-color: red;
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.close {
+  background-color: #505aa7;
+  transform: rotate(0deg) translate(0);
+}

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Header from "./header.js";
 import Navigation from "../burgerMenu/navigation.js";
-import Content from "./content.js";
+import CourseContent from "./courseContent.js";
 
 
 const Course = () => {
@@ -15,9 +15,7 @@ const Course = () => {
             <>
                 <Header/>
                 <Navigation/>
-                <Content
-                    response={generalResponse}
-                />
+                <CourseContent />
             </>
         )
 }

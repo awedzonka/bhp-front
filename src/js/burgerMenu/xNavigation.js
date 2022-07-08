@@ -27,11 +27,8 @@ const XNavigation = () => {
     }, [open]);
     return (
         <>
-            <div open={open} onClick={() => setOpen(!open)} className="xNavigation">
-                <div style={{
-                    backgroundColor: color,
-                    transform: `rotate(${topBurger.rotation}) translate(${topBurger.transformTranslate})`
-                }} className="xNavigationInside"/>
+            <div onClick={() => setOpen(!open)} className="xNavigation">
+                <div className={`xNavigationInside ${open ? "open" : "close"}`} />
                 <div style={{backgroundColor: color, display: meat}} className="xNavigationInside"/>
                 <div style={{
                     backgroundColor: color,
