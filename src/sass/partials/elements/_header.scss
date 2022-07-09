@@ -48,12 +48,6 @@ div {
   margin: 10px 0 0 0;
 
   @media ($mobileView) {
-    position: absolute;
-    height: 50vh;
-    left: 40px;
-    font-size: $fontSizeTitleMobile;
-    flex-flow: row-reverse nowrap;
-    border-radius: 10px;
     display: none;
   }
 

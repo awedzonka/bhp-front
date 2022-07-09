@@ -10,16 +10,24 @@
   border-radius: 10px;
   padding-bottom: 20px;
   padding-top: 10px;
+  background-color: $lightBlue;
+  height: fit-content;
+
+  @media ($mobileView) {
+    display: none;
+  }
 
   @media ($desktopView) {
     min-width: 20%;
-    background-color: $lightBlue;
     font-size: $fontSizeTitleDesktop;
     text-transform: capitalize;
   }
 }
 
 .mainContent {
+  @media ($mobileView) {
+    min-width: 100%;
+  }
   @media ($desktopView) {
     width: 80%;
   }
@@ -72,7 +80,8 @@
   font-size: 2.5rem;
   color: $colorHeader;
 }
-.mainContentInvitation{
+
+.mainContentInvitation {
   margin-top: 70px;
   font-size: 2rem;
   color: $colorHeader;
