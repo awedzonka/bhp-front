@@ -7,7 +7,7 @@
 @mixin button {
   box-shadow: 2px 3px 0 0 $colorHeader;
   background: linear-gradient(to bottom, $bege3 5%, #bab1ba 100%);
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid $colorHeader;
   display: inline-block;
   color: $colorHeader;

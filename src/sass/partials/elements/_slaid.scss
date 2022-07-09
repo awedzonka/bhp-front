@@ -1,9 +1,36 @@
 
-
 .slaidView img {
   @media ($desktopView) {
-    max-width: 100%;
-    max-height: 100%;
+    width: 1100px;
+    height: 610px;
+  }
+}
 
+.chooseExactSlideStyle {
+  display: flex;
+  font-size: 17px;
+  color: $colorHeader;
+  align-items: center;
+
+  input {
+    width: 55px;
+    margin: auto 20px auto 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 3px 0 0 $colorHeader;
+    border: 1px solid $colorHeader;
+  }
+
+  button {
+    margin-left: 20px;
+  }
+}
+
+.changeSlideButtons {
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin: 4px 8px;
   }
 }
