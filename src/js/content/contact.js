@@ -16,7 +16,7 @@ const Contact = () => {
             .then(resp => resp.json())
             .then(data => {
                 setGeneralResponse(data);
-                setLoading(false)
+                setTimeout(()=> { setLoading(false)}, 500)
             })
             .catch(err => console.warn("error"));
     }, []);

@@ -15,7 +15,8 @@ const Registration = () => {
             .then(resp => resp.json())
             .then(data => {
                 setGeneralResponse(data);
-                setLoading(false)
+                setTimeout(()=> { setLoading(false)}, 500)
+                // setLoading(false)
             })
             .catch(err => console.warn("error"));
     }, []);
