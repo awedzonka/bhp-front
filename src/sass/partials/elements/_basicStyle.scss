@@ -21,3 +21,7 @@ $desktopView: "min-width:1201px";
 #triangle {
   margin: 25% auto;
 }
+
+button {
+  @include button;
+}
