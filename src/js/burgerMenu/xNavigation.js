@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from "react";
 import LeftNav from "./leftNav.js";
+import MobileNavigation from "./mobileNavigation";
 
 
 const XNavigation = () => {
     const [open, setOpen] = useState(false);
     const [color, setColor] = useState("red");
+
+
     const [topBurger, setTopBurger] = useState({rotation: "0deg", transformTranslate: "0"})
     const [meat, setMeat] = useState("none");
     const [bottomBurger, setBottomBurger] = useState({rotation: "0deg", transformTranslate: "0"})
@@ -25,17 +28,28 @@ const XNavigation = () => {
 
 
     }, [open]);
+
+
     return (
         <>
             <div onClick={() => setOpen(!open)} className="xNavigation">
-                <div className={`xNavigationInside ${open ? "open" : "close"}`} />
-                <div style={{backgroundColor: color, display: meat}} className="xNavigationInside"/>
-                <div style={{
-                    backgroundColor: color,
-                    transform: `rotate(${bottomBurger.rotation}) translate(${bottomBurger.transformTranslate})`
-                }} className="xNavigationInside"/>
+                <div
+                    className={`xNavigationInside ${open ? "open" : "close"}`}
+                />
+                <div
+                    style={{backgroundColor: color, display: meat}}
+                    className="xNavigationInside"
+                />
+                <div
+                    style={{
+                        backgroundColor: color,
+                        transform: `rotate(${bottomBurger.rotation}) translate(${bottomBurger.transformTranslate})`
+                    }}
+
+                    className="xNavigationInside"/>
             </div>
             <LeftNav open={open}/>
+            <MobileNavigation openMenu={open} switchOpenFunction={setOpen}/>
         </>
     )
 }

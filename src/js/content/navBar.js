@@ -6,7 +6,7 @@ const NavBar = () => {
 
     return (
         <>
-            <ul className="navBarList">
+            <ul className="navBarListAside">
                 <li><Link to="/">Start testu</Link></li>
                 <li><Link to="/registration">Rejestracja</Link></li>
                 <li><Link to="/">Logowanie</Link></li>
