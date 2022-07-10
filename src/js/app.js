@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Home from "./home";
 import Contact from "./content/contact.js";
 import Course from "./content/course.js";
+import Login from "./content/login.js";
 import Registration from "./content/registration.js";
 import RegistrationSuccess from "./content/registrationSuccess.js";
 import "../sass/main.scss";
@@ -21,6 +22,7 @@ const App = () => {
                     <Route path="/registration" component={Registration}/>
                     <Route path="/registration-success" component={RegistrationSuccess}/>
                     <Route path="/course" component={Course}/>
+                    <Route path="/login" component={Login}/>
                 </Switch>
             </HashRouter>
         </main>
