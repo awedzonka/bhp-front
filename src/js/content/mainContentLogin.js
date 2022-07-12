@@ -63,10 +63,10 @@ const logIn =(e)=> {
         <>
             <form>
                 <div>
-                <label htmlFor={loginId}> Podaj login</label>
-                <input type="text" id="loginId" name="login" defaultValue={loginForm} onChange={handleChange}/>
-                <label htmlFor={passwordId}> Podaj hasło</label>
-                <input type="password" id="passwordId" name="password" defaultValue={loginForm} onChange={handleChange}/>
+                <label htmlFor="loginId"> Podaj login</label>
+                <input type="text" id="loginId" name="login" defaultValue="" onChange={handleChange}/>
+                <label htmlFor="passwordId"> Podaj hasło</label>
+                <input type="password" id="passwordId" name="password" defaultValue="" onChange={handleChange}/>
                 </div>
                 <button type="submit" onClick={logIn}> Zaloguj się </button>
 
