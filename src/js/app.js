@@ -4,6 +4,7 @@ import Home from "./home";
 import Contact from "./content/contact.js";
 import Course from "./content/course.js";
 import Login from "./content/login.js";
+import LoginSuccess from "./content/loginSuccess.js";
 import Registration from "./content/registration.js";
 import RegistrationSuccess from "./content/registrationSuccess.js";
 import "../sass/main.scss";
@@ -23,6 +24,7 @@ const App = () => {
                     <Route path="/registration-success" component={RegistrationSuccess}/>
                     <Route path="/course" component={Course}/>
                     <Route path="/login" component={Login}/>
+                    <Route path="/login-success" component={LoginSuccess}/>
                 </Switch>
             </HashRouter>
         </main>

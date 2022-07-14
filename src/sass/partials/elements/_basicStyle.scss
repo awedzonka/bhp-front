@@ -25,3 +25,7 @@ $desktopView: "min-width:1201px";
 button {
   @include button;
 }
+.loginFormStyle {
+  display: block;
+
+}

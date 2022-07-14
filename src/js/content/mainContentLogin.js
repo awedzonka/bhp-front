@@ -1,9 +1,11 @@
-import React, {useState, useEffect} from "react";
-import {API_URL, APP_ORIGIN, APP_PATH_REGISTRATION_SUCCESS, LOGIN_PATH, REGISTRATION_US_PATH} from "../service/consts";
+import React, {useState} from "react";
+import {API_URL, APP_ORIGIN, APP_PATH_LOGIN_SUCCESS, LOGIN_PATH} from "../service/consts";
 
 const MainContentLogin = ({response}) => {
-const [loginForm, setLoginForm] = useState({});
-const [loginData, setLoginData] = useState({});
+    //obiekt przechowujący value z input
+    const [loginForm, setLoginForm] = useState({});
+    //obiekt odpowiedzi po wysłaniu formularza
+    const [loginData, setLoginData] = useState({});
 
 
     const handleChange = (e) => {
@@ -16,14 +18,14 @@ const [loginData, setLoginData] = useState({});
         });
     };
 
-const logIn =(e)=> {
+    const logIn = (e) => {
         e.preventDefault();
         // console.log(form);
         // 1.Wysyłamy pola formularza do bhp-backend
         fetch(API_URL + LOGIN_PATH,
             {
                 method: "POST",
-                body: JSON.stringify(form),
+                body: JSON.stringify(loginForm),
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -37,40 +39,51 @@ const logIn =(e)=> {
             .then(json => {
                 console.log(json);
                 // Jeżeli odpowiedź to 200, to konto zostało zarejestrowane
-                if (json.customer.registration.statusRegistration === 200) {
+                if (json.customer.logging.statusLogging === 200) {
+
+                    // pobieramy sesyjne ciasteczko
+                    document.cookie = `${json.customer.cookieSession.key}=${json.customer.cookieSession.value}; path=/`;
 
                     // wysylamy na stronę po logowaniu
-
-                    window.location = APP_ORIGIN + APP_PATH_REGISTRATION_SUCCESS;
+                    window.location = APP_ORIGIN + APP_PATH_LOGIN_SUCCESS;
 
                 } else {
                     // Jeżeli odpowiedź to nie 200, to zapisujemy odpowiedź do stanu w celu wyświetlenia błędów walidacji
-                    setRegistrationData(json);
+                    setLoginData(json);
                 }
             })
 
             .catch(err => {
                 console.warn(err)
             });
+    }
 
-
-
-
-}
-
+    const getGeneralValidationInfo = () => {
+        let text = loginData?.customer?.logging?.generalErrorMessage;
+        return <span style={{color: "red"}}>{text}</span>
+    }
 
     return (
         <>
-            <form>
-                <div>
-                <label htmlFor="loginId"> Podaj login</label>
-                <input type="text" id="loginId" name="login" defaultValue="" onChange={handleChange}/>
-                <label htmlFor="passwordId"> Podaj hasło</label>
-                <input type="password" id="passwordId" name="password" defaultValue="" onChange={handleChange}/>
-                </div>
-                <button type="submit" onClick={logIn}> Zaloguj się </button>
+            <div className="mainContent">
+                <div>{console.log(loginForm)}</div>
+                <h1> Logowanie</h1>
+                <div>{getGeneralValidationInfo()}</div>
+                <form className="loginFormStyle">
+                    <div>
+                        <div><label className="labelStyle" htmlFor="loginId"> Podaj login</label></div>
+                        <div><input className="inputStyle" type="text" id="loginId" name="login" defaultValue=""
+                                    onChange={handleChange}/></div>
+                    </div>
+                    <div>
+                        <div><label className="labelStyle" htmlFor="passwordId"> Podaj hasło</label></div>
+                        <div><input className="inputStyle" type="password" id="passwordId" name="password"
+                                    defaultValue="" onChange={handleChange}/></div>
+                    </div>
+                    <button type="submit" onClick={logIn}> Zaloguj się</button>
 
-            </form>
+                </form>
+            </div>
         </>
     )
 }
