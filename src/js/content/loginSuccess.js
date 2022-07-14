@@ -8,7 +8,7 @@ import {API_URL, APP_ORIGIN, APP_PATH_REGISTRATION_SUCCESS, REGISTRATION_US_PATH
 import {getCookie} from "../service/cookieService";
 
 
-const RegistrationSuccess = () => {
+const LoginSuccess = () => {
     const [loading, setLoading] = useState(true);
     const [generalResponse, setGeneralResponse] = useState(null)
     const [name, setName] = useState("")
@@ -78,4 +78,4 @@ const RegistrationSuccess = () => {
     }
 }
 
-export default RegistrationSuccess;
+export default LoginSuccess;
