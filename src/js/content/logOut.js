@@ -29,7 +29,6 @@ const LogOut = () => {
 
 
     useEffect(() => {
-
         fetch("http://localhost:8030/getSessionData",
             {
                 method: "GET",

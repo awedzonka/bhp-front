@@ -93,7 +93,7 @@ const MainContentRegistration = ({response}) => {
                         </div>
                     )
                 })}
-                    <button type="submit" onClick={sendForm}>Zarejestruj się</button>
+                    <button className="registrationBtn" type="submit" onClick={sendForm}>Zarejestruj się</button>
                 </div>
             </form>
         </div>

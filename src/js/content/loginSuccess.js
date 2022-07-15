@@ -33,8 +33,30 @@ const LoginSuccess = () => {
 
     }, []);
 
-    useEffect(()=>{
+    useEffect(() => {
 
+        fetch("http://localhost:8030/getSessionData",
+            {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    //ciasteczka są wysyłane w nagłówku request
+                    "BHP_SID": `${getCookie("BHP_SID")}`
+                }
+            })
+            .then(resp => {
+                return resp.json()
+            })
+            .then(json => {
+                console.log(json);
+                setSession(json);
+            })
+            .catch(err => {
+                console.warn(err)
+            });
+
+    }, [])
+    useEffect(() => {
         fetch("http://localhost:8030/getSessionData",
             {
                 method: "GET",
@@ -70,7 +92,7 @@ const LoginSuccess = () => {
             <>
                 <Header/>
                 <Navigation/>
-                <UserLogOutLogIn session = {session}/>
+                <UserLogOutLogIn session={session}/>
                 <Content
                     response={generalResponse}
                 />

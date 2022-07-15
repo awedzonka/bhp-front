@@ -81,7 +81,7 @@ const MainContentLogin = ({response}) => {
                                     defaultValue="" onChange={handleChange}/></div>
                     </div>
                     <div>
-                    <button type="submit" onClick={logIn}> Zaloguj się</button>
+                    <button className= "loginBtn" type="submit" onClick={logIn}> Zaloguj się</button>
                     </div>
                 </form>
             </div>
