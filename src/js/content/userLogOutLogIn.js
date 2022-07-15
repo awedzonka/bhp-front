@@ -18,13 +18,11 @@ else {
         <div className="userLogOutLogInStyle">
 
             <span> {session.firstName}  |   </span>
-            <Link to="/login">Wyloguj</Link>
+            <Link to="/logout">Wyloguj</Link>
         </div>
 
     )
 }
-
-
 
 }
 export default UserLogOutLogIn;

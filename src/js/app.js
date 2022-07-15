@@ -5,6 +5,7 @@ import Contact from "./content/contact.js";
 import Course from "./content/course.js";
 import Login from "./content/login.js";
 import LoginSuccess from "./content/loginSuccess.js";
+import LogOut from "./content/logOut.js";
 import Registration from "./content/registration.js";
 import RegistrationSuccess from "./content/registrationSuccess.js";
 import "../sass/main.scss";
@@ -25,6 +26,7 @@ const App = () => {
                     <Route path="/course" component={Course}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/login-success" component={LoginSuccess}/>
+                    <Route path="/logout" component={LogOut}/>
                 </Switch>
             </HashRouter>
         </main>
