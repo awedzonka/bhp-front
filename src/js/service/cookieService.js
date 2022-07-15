@@ -1,3 +1,5 @@
+//https://www.w3schools.com/js/js_cookies.asp
+
 export function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);

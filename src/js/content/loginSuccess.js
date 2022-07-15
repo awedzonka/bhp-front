@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Header from "./header.js";
 import LoadingPage from "./loadingPage.js";
+import UserLogOutLogIn from "./userLogOutLogIn.js";
 import Navigation from "../burgerMenu/navigation.js";
 import Content from "./content.js";
 import Footer from "./footer";
@@ -11,7 +12,7 @@ import {getCookie} from "../service/cookieService";
 const LoginSuccess = () => {
     const [loading, setLoading] = useState(true);
     const [generalResponse, setGeneralResponse] = useState(null)
-    const [name, setName] = useState("")
+    const [session, setSession] = useState({})
 
     useEffect(() => {
 
@@ -39,6 +40,7 @@ const LoginSuccess = () => {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
+                    //ciasteczka są wysyłane w nagłówku request
                     "BHP_SID": `${getCookie("BHP_SID")}`
                 }
             })
@@ -47,7 +49,7 @@ const LoginSuccess = () => {
             })
             .then(json => {
                 console.log(json);
-                setName(json.firstName);
+                setSession(json);
             })
             .catch(err => {
                 console.warn(err)
@@ -68,7 +70,7 @@ const LoginSuccess = () => {
             <>
                 <Header/>
                 <Navigation/>
-                <div>{name}</div>
+                <UserLogOutLogIn session = {session}/>
                 <Content
                     response={generalResponse}
                 />

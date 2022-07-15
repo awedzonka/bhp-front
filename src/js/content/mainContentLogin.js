@@ -80,8 +80,9 @@ const MainContentLogin = ({response}) => {
                         <div><input className="inputStyle" type="password" id="passwordId" name="password"
                                     defaultValue="" onChange={handleChange}/></div>
                     </div>
+                    <div>
                     <button type="submit" onClick={logIn}> Zaloguj się</button>
-
+                    </div>
                 </form>
             </div>
         </>
