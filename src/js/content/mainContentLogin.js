@@ -41,7 +41,7 @@ const MainContentLogin = ({response}) => {
                 // Jeżeli odpowiedź to 200, to konto zostało zarejestrowane
                 if (json.customer.logging.statusLogging === 200) {
 
-                    // pobieramy sesyjne ciasteczko
+                    // pobieramy sesyjne ciasteczko, path="/" oznacza ze ciasteczko jest widoczne na każdej podstronie
                     document.cookie = `${json.customer.cookieSession.key}=${json.customer.cookieSession.value}; path=/`;
 
                     // wysylamy na stronę po logowaniu
@@ -63,6 +63,10 @@ const MainContentLogin = ({response}) => {
         return <span style={{color: "red"}}>{text}</span>
     }
 
+    const validationInfo = (nameOfInput)=> {
+        return <span style={{color: "red"}}>{loginData?.customer?.logging?.mapErrors?.[nameOfInput]}</span>
+    }
+
     return (
         <>
             <div className="mainContent">
@@ -74,11 +78,13 @@ const MainContentLogin = ({response}) => {
                         <div><label className="labelStyle" htmlFor="loginId"> Podaj login</label></div>
                         <div><input className="inputStyle" type="text" id="loginId" name="login" defaultValue=""
                                     onChange={handleChange}/></div>
+                        <div>{validationInfo("login")}</div>
                     </div>
                     <div>
                         <div><label className="labelStyle" htmlFor="passwordId"> Podaj hasło</label></div>
                         <div><input className="inputStyle" type="password" id="passwordId" name="password"
                                     defaultValue="" onChange={handleChange}/></div>
+                        <div>{validationInfo("password")}</div>
                     </div>
                     <div>
                     <button className= "loginBtn" type="submit" onClick={logIn}> Zaloguj się</button>
