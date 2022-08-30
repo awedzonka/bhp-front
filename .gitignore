@@ -107,4 +107,5 @@ package-lock.json
 .idea
 session.json
 generalResponse.json
+*.iml
 

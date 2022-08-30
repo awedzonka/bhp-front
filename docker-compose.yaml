@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  front-bhp:
+    build:
+      # kontekst - informacja skąd będą brane pliki źródłowe. Podajemy bieżący katalog
+      context: .
+      dockerfile: ./config/Dockerfile
+    # ustalmy sobie nazwe kontenera.
+    container_name: front-bhp
+    ports:
+      - "8009:3005"
+    #  volumes - powiemy, że nasz bieżący katalog mapujemy z katalogiem /var/www/front-bhp
+    volumes:
+      - ./:/var/www/front-bhp
