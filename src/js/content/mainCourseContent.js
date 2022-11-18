@@ -50,7 +50,8 @@ const MainCourseContent = () => {
                     <button onClick={changeNextSlide}>następny slajd</button>
                 </div>
                 <div className="slaidView">
-                    <img src={`../../images/slides/Slajd${slideNumber}.PNG`}/>
+                    {/*<img src={`../../images/slides/Slajd${slideNumber}.PNG`}/>*/}
+                    <img src={`/var/www/front-bhp/src/images/slides/Slajd${slideNumber}.PNG`}/>
                 </div>
             </div>
         </>

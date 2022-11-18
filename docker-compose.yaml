@@ -8,7 +8,7 @@ services:
     # ustalmy sobie nazwe kontenera.
     container_name: front-bhp
     ports:
-      - "8009:3005"
+      - "8082:3005"
     #  volumes - powiemy, że nasz bieżący katalog mapujemy z katalogiem /var/www/front-bhp
     volumes:
       - ./:/var/www/front-bhp
